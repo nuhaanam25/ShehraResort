@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant & Bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Forum&family=Montserrat:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Basic Reset & Body Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #f8f8f8;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      /* Section Header */
+      .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding-top: 5rem; /* Add padding to the top */
+      }
+
+      .section-header span {
+        font-size: 0.9rem;
+        color: #ad8b73;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      .section-header h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        color: #222;
+        font-weight: 700;
+      }
+
+      /* Restaurant Section Layout */
+      .restaurant-section-content {
+        display: grid;
+        grid-template-columns: 1fr 2fr; /* Image column and menu column */
+        gap: 3rem;
+        align-items: start; /* Align items to the start of their grid area */
+      }
+
+      /* Left Image Column */
+      .restaurant-image-column {
+        position: relative;
+        /* Adjusted padding-bottom for a taller, more square aspect ratio */
+        padding-bottom: 100%; /* Makes the container square (1:1 aspect ratio) */
+        height: 0;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .restaurant-image-column img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+     
+
+      /* Right Menu Column */
+      .menu-column {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Two columns for menu items */
+        gap: 1rem;
+      }
+
+      .menu-item {
+        background-color: #fff;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        display: grid;
+        grid-template-columns: auto 1fr auto; /* Image, text, price */
+        align-items: center;
+        gap: 1rem;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .menu-item:hover {
+        background-color: rgb(31, 31, 37); /* Background changes on hover */
+        transform: translateY(-5px); /* Lift effect */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+      }
+
+      .menu-item:hover .item-name,
+      .menu-item:hover .item-description,
+      .menu-item:hover .item-price {
+        color: #fffbe9; /* Text color changes on hover */
+      }
+
+      .menu-item-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #ddd; /* Small border */
+      }
+
+      .item-details {
+        text-align: left;
+      }
+
+      .item-name {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #222;
+        margin-bottom: 0.2rem;
+      }
+
+      .item-description {
+        font-size: 0.85rem;
+        color: #777;
+      }
+
+      .item-price {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #ad8b73;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 992px) {
+        .restaurant-section-content {
+          grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        }
+        .restaurant-image-column {
+          padding-bottom: 50%; /* Adjust aspect ratio for better mobile view */
+        }
+        
+        .menu-column {
+          grid-template-columns: 1fr; /* Single column for menu items on tablets */
+        }
+      }
+
+      @media (max-width: 768px) {
+        .section-header h1 {
+          font-size: 2.5rem;
+        }
+        .restaurant-section-content {
+          gap: 2rem;
+        }
+        .menu-item {
+          padding: 0.8rem 1rem;
+          gap: 0.8rem;
+        }
+        .menu-item-img {
+          width: 50px;
+          height: 50px;
+        }
+        .item-name {
+          font-size: 1rem;
+        }
+        .item-description {
+          font-size: 0.8rem;
+        }
+        .item-price {
+          font-size: 1.1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .section-header h1 {
+          font-size: 2rem;
+        }
+        .restaurant-image-column {
+          padding-bottom: 60%; /* Slightly taller on small phones */
+        }
+       
+        .menu-item {
+          grid-template-columns: auto 1fr; /* Stack price below details if needed */
+          gap: 0.5rem;
+        }
+        .item-price {
+          grid-column: span 2; /* Make price span both columns if stacked */
+          text-align: right;
+          margin-top: 0.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="restaurant-bar-section container">
+      <div class="section-header">
+        <span>RESTO & BAR</span>
+        <h1>Restaurant & Bar</h1>
+      </div>
+
+      <div class="restaurant-section-content">
+        <div class="restaurant-image-column">
+          <img src="resto-bar.jpg.jpg" alt="Restaurant View" />
+          
+        </div>
+
+        <div class="menu-column">
+          <div class="menu-item">
+            <img src="menu-1.jpg.jpg" alt="Grilled Beef" class="menu-item-img" />
+            <div class="item-details">
+              <div class="item-name">Grilled Beef with potatoes</div>
+              <div class="item-description">Far far away, behind the word mountains</div>
+            </div>
+            <div class="item-price">$20.00</div>
+          </div>
+
+          <div class="menu-item">
+            <img src="menu-2.jpg.jpg" alt="Grilled Beef" class="menu-item-img" />
+            <div class="item-details">
+              <div class="item-name">Grilled Beef with potatoes</div>
+              <div class="item-description">Far far away, behind the word mountains</div>
+            </div>
+            <div class="item-price">$49.91</div>
+          </div>
+
+          <div class="menu-item">
+            <img src="menu-3.jpg.jpg" alt="Grilled Beef" class="menu-item-img" />
+            <div class="item-details">
+              <div class="item-name">Grilled Beef with potatoes</div>
+              <div class="item-description">Far far away, behind the word mountains</div>
+            </div>
+            <div class="item-price">$29.00</div>
+          </div>
+
+          <div class="menu-item">
+            <img src="menu-4.jpg.jpg" alt="Ultimate Overload" class="menu-item-img" />
+            <div class="item-details">
+              <div class="item-name">Ultimate Overload</div>
+              <div class="item-description">Far far away, behind the word mountains</div>
+            </div>
+            <div class="item-price">$20.00</div>
+          </div>
+
+          <div class="menu-item">
+            <img src="menu-5.jpg.jpg" alt="Grilled Beef" class="menu-item-img" />
+            <div class="item-details">
+              <div class="item-name">Grilled Beef with potatoes</div>
+              <div class="item-description">Far far away, behind the word mountains</div>
+            </div>
+            <div class="item-price">$20.00</div>
+          </div>
+
+          <div class="menu-item">
+            <img src="menu-6.jpg.jpg" alt="Grilled Beef" class="menu-item-img" />
+            <div class="item-details">
+              <div class="item-name">Grilled Beef with potatoes</div>
+              <div class="item-description">Far far away, behind the word mountains</div>
+            </div>
+            <div class="item-price">$20.00</div>
+          </div>
+
+          <!-- <div class="menu-item">
+            <img src="menu-7.jpg.jpg" alt="Ham & Pineapple" class="menu-item-img" />
+            <div class="item-details">
+              <div class="item-name">Ham & Pineapple</div>
+              <div class="item-description">Far far away, behind the word mountains</div>
+            </div>
+            <div class="item-price">$20.00</div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+  </body>
+</html>

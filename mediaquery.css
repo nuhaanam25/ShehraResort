@@ -1,0 +1,491 @@
+/* Media Queries for Responsiveness */
+@media (max-width: 1120px) {
+  /* .nav-links {
+          grid-template-columns: repeat(3, auto); /* Adjust for more compact display on tablets */
+  
+ .nav-container {
+    grid-template-columns: auto 1fr; /* Only logo and hamburger */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon */
+    justify-self: end;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px; /* Below header */
+    left: 0;
+    width: 100%;
+    background-color: #222222; /* Same as header */
+    grid-template-columns: 1fr; /* Stack links vertically */
+    justify-items: center;
+    padding: 1rem 0;
+    border-top: 1px solid #ad8b73;
+    display: none; /* Hidden by default */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem 0;
+  }
+
+  .nav-links a.cta {
+    margin-top: 1rem;
+  }
+
+  #toggle-menu:checked + .hamburger + .nav-links {
+    display: grid; /* Show menu when checkbox is checked */
+  }
+  .booking-form {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(200px, 1fr)
+    ); /* Adjust for better flow on tablets */
+    padding: 30px;
+    bottom: -100px; /* Adjust position */
+  }
+
+  .booking-section {
+    grid-template-columns: 1fr; /* Stack columns on tablets */
+    padding: 8rem 2rem;
+  }
+
+  .grid-box {
+    grid-template-columns: 1fr; /* Stack cards and images */
+  }
+
+  .right-content {
+    grid-column: span 1; /* Remove span for single column */
+    text-align: center;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(150px, 1fr)
+    ); /* Adjust service cards */
+  }
+
+  .jour-images {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(200px, 1fr)
+    ); /* Adjust journey images */
+  }
+  .restaurant-section-content {
+          grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        }
+        .restaurant-image-column {
+          padding-bottom: 50%; /* Adjust aspect ratio for better mobile view */
+        }
+        
+        .menu-column {
+          grid-template-columns: 1fr; /* Single column for menu items on tablets */
+        }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    grid-template-columns: auto 1fr; /* Only logo and hamburger */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon */
+    justify-self: end;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px; /* Below header */
+    left: 0;
+    width: 100%;
+    background-color: #222222; /* Same as header */
+    grid-template-columns: 1fr; /* Stack links vertically */
+    justify-items: center;
+    padding: 1rem 0;
+    border-top: 1px solid #ad8b73;
+    display: none; /* Hidden by default */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem 0;
+  }
+
+  .nav-links a.cta {
+    margin-top: 1rem;
+  }
+
+  #toggle-menu:checked + .hamburger + .nav-links {
+    display: grid; /* Show menu when checkbox is checked */
+  }
+.hero-content{
+  top: 29%;
+}
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.8rem;
+  }
+
+  .hero-buttons {
+    grid-auto-flow: row; /* Stack buttons vertically */
+    justify-content: center;
+  }
+
+  .booking-form {
+    grid-template-columns: 1fr; /* Stack all booking form inputs */
+    padding: 20px;
+    bottom: -150px; /* Adjust position for stacked form */
+  }
+
+  .booking-section {
+    padding: 12rem 1rem 5rem 1rem; /* Adjust padding due to form position */
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .right-content h1 {
+    font-size: 2rem;
+  }
+
+  .right-content p {
+    font-size: 0.9rem;
+  }
+
+  .resort-services,
+  .journey {
+    padding: 3rem 1rem;
+  }
+
+  .services-header h1 {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(120px, 1fr)
+    ); /* Smaller cards on mobile */
+  }
+
+  .jour-head h1 {
+    font-size: 2rem;
+  }
+
+  .jour-images {
+    grid-template-columns: 1fr; /* Stack journey images */
+  }
+
+  .jour-box:nth-child(odd),
+  .jour-box:nth-child(even) {
+    transform: translateY(0); /* Remove zig-zag on small screens */
+  }
+  .section-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .rooms-grid {
+    grid-template-columns: 1fr; /* Stack cards on smaller screens */
+  }
+
+  .room-image {
+    height: 200px; /* Adjust image height for smaller screens */
+  }
+
+  .room-details h2 {
+    font-size: 1.5rem;
+  }
+/* 
+  .room-details p {
+    font-size: 0.85rem;
+  } */
+
+  .room-price {
+    font-size: 1rem;
+  }
+
+  .book-now-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+   .section-header h1 {
+          font-size: 2.5rem;
+        }
+        .restaurant-section-content {
+          gap: 2rem;
+        }
+        .menu-item {
+          padding: 0.8rem 1rem;
+          gap: 0.8rem;
+        }
+        .menu-item-img {
+          width: 50px;
+          height: 50px;
+        }
+        .item-name {
+          font-size: 1rem;
+        }
+        .item-description {
+          font-size: 0.8rem;
+        }
+        .item-price {
+          font-size: 1.1rem;
+        }
+          .footer-container {
+          grid-template-columns: 1fr; /* Stack columns on smaller screens */
+          text-align: center;
+        }
+
+        .footer-col.about .logo {
+          font-size: 1.6rem;
+        }
+
+        .footer-col.about .logo span {
+          font-size: 0.7rem;
+        }
+
+        .social-links {
+          justify-content: center; /* Center social icons */
+        }
+
+        .footer-col h3 {
+          margin-top: 1.5rem;
+          margin-bottom: 0.8rem;
+        }
+
+        .footer-links,
+        .contact-info {
+          justify-items: center; /* Center links/info */
+        }
+
+        .footer-links a,
+        .contact-info div {
+          grid-template-columns: auto auto; /* Adjust for centered icons */
+          justify-content: center;
+          text-align: left; /* Align text to left of icon */
+        }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+  .booking-form {
+    padding: 15px;
+  }
+  .card h3 {
+    font-size: 1rem;
+  }
+  .card p {
+    font-size: 0.8rem;
+  }
+  .right-content h1 {
+    font-size: 1.8rem;
+  }
+  .right-content p {
+    font-size: 0.85rem;
+  }
+  .service-card {
+    max-width: 150px; /* Further reduce max-width */
+  }
+  .service-card h3 {
+    font-size: 0.85rem;
+  }
+  .jour-head h1 {
+    font-size: 1.8rem;
+  }
+  .featured-rooms-section {
+    padding: 3rem 1rem;
+  }
+
+  .section-header h1 {
+    font-size: 2rem;
+  }
+  .section-header h1 {
+          font-size: 2rem;
+        }
+        .restaurant-image-column {
+          padding-bottom: 60%; /* Slightly taller on small phones */
+        }
+       
+        .menu-item {
+          grid-template-columns: auto 1fr; /* Stack price below details if needed */
+          gap: 0.5rem;
+        }
+        .item-price {
+          grid-column: span 2; /* Make price span both columns if stacked */
+          text-align: right;
+          margin-top: 0.5rem;
+        }
+  .footer-section {
+          padding: 3rem 1rem;
+        }
+
+        .footer-col h3 {
+          font-size: 1.1rem;
+        }
+
+        .footer-col.about .logo {
+          font-size: 1.4rem;
+        }
+
+        .footer-col.about p {
+          font-size: 0.8rem;
+        }
+
+        .footer-links a,
+        .contact-info div {
+          font-size: 0.85rem;
+        }
+
+        .copyright {
+          font-size: 0.75rem;
+        }
+}
+  
+      /* CONTACT-PAGE */
+@media (max-width: 992px) {
+  .contact-grid-container {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    padding: 0 3%;
+  }
+
+  .contact-intro,
+  .contact-form-container,
+  .contact-map {
+    grid-column: 1 / -1; /* Make them span full width */
+  }
+  /* .hero-content h1{
+    font-size: 2.5rem;
+  } */
+}
+@media(max-width: 840px){
+.hero-content h1{
+  font-size: 1.2rem;
+}
+.hero-content p{
+  font-size: 0.5rem;
+}
+}
+@media (max-width: 768px) {
+  
+
+  .contact-hero h1 {
+    font-size: 2rem;
+  }
+
+  .contact-intro h2,
+  .contact-form-container h2,
+  .contact-map h2 {
+    font-size: 1.6rem;
+  }
+  .about.ets {
+    /* On smaller screens, stack everything in a single column */
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image1"
+      "content1"
+      "image2"
+      "content2";
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero {
+    padding: 40px 15px;
+  }
+
+  .contact-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .contact-hero p {
+    font-size: 0.95rem;
+  }
+
+  .contact-intro,
+  .contact-form-container,
+  .contact-map {
+    padding: 20px;
+  }
+
+  .contact-intro p {
+    font-size: 0.9rem;
+  }
+
+  .social-links a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+  }
+}
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 1024px (e.g., larger tablets) */
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .gallery img {
+    height: 250px;
+  }
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+  }
+}
+
+/* For screens smaller than 768px (e.g., tablets) */
+@media (max-width: 768px) {
+  .gallery-container {
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  .gallery img {
+    height: 220px;
+  }
+  h1 {
+    font-size: 2em;
+    margin-bottom: 25px;
+  }
+}
+
+/* For screens smaller than 480px (e.g., mobile phones) */
+@media (max-width: 480px) {
+  .gallery-container {
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+  .gallery {
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: 10px;
+  }
+  .gallery img {
+    height: 200px;
+  }
+  h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+}
